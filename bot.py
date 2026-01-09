@@ -14,7 +14,7 @@ async def group_only(message: types.Message):
     if message.chat.type not in (ChatType.GROUP, ChatType.SUPERGROUP):
         return
 
-@dp.message(lambda m: m.chat.type in ("group", "supergroup") and m.text == "/hello")
+@dp.message(lambda m: m.chat.type in ("group", "supergroup") and m.text == "/hello@obsosAMbot")
 async def send_voice(message: types.Message):
     voice = FSInputFile("hello.ogg")
     await message.answer_voice(voice)
